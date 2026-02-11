@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список дел - О нас</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/localforage@1.10.0/dist/localforage.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <h1 class="text-2xl font-bold text-gray-800">📝 TaskMaster</h1>
+                <div class="flex gap-2 md:gap-4">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="tasks.html" class="nav-link">Задачи</a>
+                    <a href="completed.html" class="nav-link">Завершенные</a>
+                    <a href="categories.html" class="nav-link">Категории</a>
+                    <a href="about.html" class="nav-link active">О нас</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-12">
+        <!-- Hero Section -->
+        <div class="text-center mb-16">
+            <div class="text-6xl mb-6">📝</div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">TaskMaster</h2>
+            <p class="text-xl text-gray-600">Ваш персональный помощник в управлении задачами</p>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl"
+                style="transition: all 0.3s ease;">
+                <div class="text-5xl mb-4">🎯</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Простота использования</h3>
+                <p class="text-gray-600">Интуитивный интерфейс для быстрого создания и управления задачами</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl"
+                style="transition: all 0.3s ease;">
+                <div class="text-5xl mb-4">💾</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Локальное хранилище</h3>
+                <p class="text-gray-600">Все данные хранятся на вашем устройстве с помощью localForage</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl"
+                style="transition: all 0.3s ease;">
+                <div class="text-5xl mb-4">🏷️</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Категории</h3>
+                <p class="text-gray-600">Организуйте задачи по категориям для лучшей структуры</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl"
+                style="transition: all 0.3s ease;">
+                <div class="text-5xl mb-4">🎨</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Современный дизайн</h3>
+                <p class="text-gray-600">Красивый интерфейс с плавными анимациями</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl"
+                style="transition: all 0.3s ease;">
+                <div class="text-5xl mb-4">⚡</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Быстрая работа</h3>
+                <p class="text-gray-600">Никаких задержек, все работает мгновенно</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl"
+                style="transition: all 0.3s ease;">
+                <div class="text-5xl mb-4">📱</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Адаптивность</h3>
+                <p class="text-gray-600">Отлично работает на всех устройствах</p>
+            </div>
+        </div>
+
+        <!-- Technology Stack -->
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl shadow-lg p-10 text-white mb-16">
+            <h3 class="text-3xl font-bold text-center mb-8">Технологии</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm hover:bg-opacity-30"
+                    style="transition: all 0.3s ease;">
+                    <div class="text-4xl font-bold mb-2">HTML5</div>
+                    <p class="text-sm opacity-90">Структура</p>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm hover:bg-opacity-30"
+                    style="transition: all 0.3s ease;">
+                    <div class="text-4xl font-bold mb-2">CSS3</div>
+                    <p class="text-sm opacity-90">Стилизация</p>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm hover:bg-opacity-30"
+                    style="transition: all 0.3s ease;">
+                    <div class="text-4xl font-bold mb-2">JavaScript</div>
+                    <p class="text-sm opacity-90">Логика</p>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm hover:bg-opacity-30"
+                    style="transition: all 0.3s ease;">
+                    <div class="text-4xl font-bold mb-2">Tailwind</div>
+                    <p class="text-sm opacity-90">UI Framework</p>
+                </div>
+            </div>
+            <div class="text-center mt-6">
+                <div class="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm inline-block hover:bg-opacity-30"
+                    style="transition: all 0.3s ease;">
+                    <div class="text-4xl font-bold mb-2">localForage</div>
+                    <p class="text-sm opacity-90">Хранение данных (IndexedDB)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6">Готовы начать?</h3>
+            <a href="tasks.html" class="btn btn-primary text-lg px-8 py-4 inline-block">
+                Создать первую задачу
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-16 border-t border-gray-200">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-600">
+            <p>&copy; 2026 TaskMaster. Все права защищены.</p>
+            <p class="mt-2 text-sm">Сделано с ❤️ для повышения вашей продуктивности</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

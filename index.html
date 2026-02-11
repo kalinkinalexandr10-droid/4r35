@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список дел - Главная</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/localforage@1.10.0/dist/localforage.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <h1 class="text-2xl font-bold text-gray-800">📝 TaskMaster</h1>
+                <div class="flex gap-2 md:gap-4">
+                    <a href="index.html" class="nav-link active">Главная</a>
+                    <a href="tasks.html" class="nav-link">Задачи</a>
+                    <a href="completed.html" class="nav-link">Завершенные</a>
+                    <a href="categories.html" class="nav-link">Категории</a>
+                    <a href="about.html" class="nav-link">О нас</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Управляйте своими задачами</h2>
+            <p class="text-gray-600 text-lg">Современный инструмент для организации вашей жизни</p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="stat-card bg-white">
+                <div class="text-5xl mb-4">📋</div>
+                <div class="text-3xl font-bold text-blue-600" id="totalTasks">0</div>
+                <div class="text-gray-600 mt-2">Всего задач</div>
+            </div>
+            <div class="stat-card bg-white">
+                <div class="text-5xl mb-4">✅</div>
+                <div class="text-3xl font-bold text-green-600" id="completedTasks">0</div>
+                <div class="text-gray-600 mt-2">Завершено</div>
+            </div>
+            <div class="stat-card bg-white">
+                <div class="text-5xl mb-4">⏰</div>
+                <div class="text-3xl font-bold text-orange-600" id="activeTasks">0</div>
+                <div class="text-gray-600 mt-2">Активных</div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Быстрые действия</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="tasks.html" class="action-btn bg-blue-500 hover:bg-blue-600">
+                    <span class="text-2xl mb-2">➕</span>
+                    <span>Создать задачу</span>
+                </a>
+                <a href="tasks.html" class="action-btn bg-purple-500 hover:bg-purple-600">
+                    <span class="text-2xl mb-2">📝</span>
+                    <span>Все задачи</span>
+                </a>
+                <a href="completed.html" class="action-btn bg-green-500 hover:bg-green-600">
+                    <span class="text-2xl mb-2">🏆</span>
+                    <span>Достижения</span>
+                </a>
+                <a href="categories.html" class="action-btn bg-orange-500 hover:bg-orange-600">
+                    <span class="text-2xl mb-2">🏷️</span>
+                    <span>Категории</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Recent Tasks Preview -->
+        <div class="mt-16">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Недавние задачи</h3>
+            <div id="recentTasksContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tasks will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-16 border-t border-gray-200">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-600">
+            <p>&copy; 2026 TaskMaster. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="home.js"></script>
+</body>
+
+</html>
